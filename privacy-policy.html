@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Interview Copilot</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', -apple-system, system-ui, sans-serif; color: #1e293b; line-height: 1.7; background: #f8fafc; }
+    .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    h1 { font-size: 28px; font-weight: 800; margin-bottom: 4px; }
+    .subtitle { color: #64748b; font-size: 14px; margin-bottom: 32px; }
+    h2 { font-size: 18px; font-weight: 700; margin: 28px 0 8px; color: #0f172a; }
+    p, li { font-size: 15px; color: #334155; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; }
+    a { color: #4F7FFF; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .badge { display: inline-block; background: #EEF3FF; color: #4F7FFF; font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-bottom: 24px; }
+    footer { text-align: center; color: #94a3b8; font-size: 12px; margin-top: 48px; padding-top: 24px; border-top: 1px solid #e2e8f0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Interview Copilot — Chrome Extension</p>
+    <span class="badge">Last updated: April 1, 2026</span>
+
+    <h2>1. Overview</h2>
+    <p>Interview Copilot ("the Extension") is a Chrome extension that assists users during browser-based job interviews by detecting spoken questions in real time and generating AI-powered answer suggestions. This privacy policy explains what data the Extension accesses, how it is used, and how it is protected.</p>
+
+    <h2>2. Data We Access</h2>
+    <p>The Extension accesses the following data only when explicitly activated by the user:</p>
+    <ul>
+      <li><strong>Microphone audio:</strong> The Extension uses the browser's built-in Web Speech API to transcribe spoken audio into text. Audio is processed locally by the browser's speech recognition engine — raw audio is never transmitted to our servers or any third party by the Extension.</li>
+      <li><strong>Transcribed text:</strong> The text produced by speech recognition is analyzed locally within the browser tab to detect interview questions.</li>
+      <li><strong>Detected questions:</strong> When a question is detected, the question text is sent to the Google Gemini API (generativelanguage.googleapis.com) to generate a suggested answer.</li>
+    </ul>
+
+    <h2>3. Data We Do NOT Collect</h2>
+    <ul>
+      <li>We do not collect, store, or transmit personally identifiable information (name, email, address, etc.).</li>
+      <li>We do not collect browsing history, cookies, or website content beyond the speech transcript.</li>
+      <li>We do not collect financial, health, authentication, or location data.</li>
+      <li>We do not track user activity such as clicks, mouse position, scroll, or keystrokes.</li>
+      <li>We do not use analytics, telemetry, or tracking scripts of any kind.</li>
+    </ul>
+
+    <h2>4. Data Storage</h2>
+    <p>All transcript and answer data is held <strong>in memory only</strong> for the duration of the active session. When the user closes the overlay panel or navigates away from the page, all data is discarded. No transcript, question, or answer data is ever written to disk, local storage, or any persistent database.</p>
+
+    <h2>5. Third-Party Services</h2>
+    <p>The Extension sends detected question text to the <strong>Google Gemini API</strong> to generate answer suggestions. This is the only external service the Extension communicates with. Google's usage of data sent to the Gemini API is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+    <p>No data is shared with any other third party.</p>
+
+    <h2>6. Permissions</h2>
+    <ul>
+      <li><strong>activeTab:</strong> Used to identify the current tab when the user clicks "Launch on This Tab."</li>
+      <li><strong>scripting:</strong> Used to inject the floating overlay UI into the active tab on user request.</li>
+      <li><strong>storage:</strong> Reserved for future use (user preferences). Not currently used.</li>
+      <li><strong>Host permissions (&lt;all_urls&gt;):</strong> Required to inject the overlay into any website where an interview may take place (Zoom, Google Meet, Teams, company portals, etc.).</li>
+    </ul>
+
+    <h2>7. User Control</h2>
+    <ul>
+      <li>The Extension only activates when the user explicitly clicks "Launch on This Tab" and then "Start."</li>
+      <li>The user can stop listening at any time by clicking "Stop" or closing the overlay.</li>
+      <li>No background monitoring, automatic injection, or passive data collection ever occurs.</li>
+      <li>Uninstalling the Extension removes all associated data immediately.</li>
+    </ul>
+
+    <h2>8. Data Sharing and Sales</h2>
+    <p>We do not sell, transfer, or share user data with any third party outside of the single purpose described above (sending question text to Google Gemini API for answer generation).</p>
+
+    <h2>9. Children's Privacy</h2>
+    <p>The Extension is not directed at children under 13 and does not knowingly collect data from children.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>If this privacy policy is updated, the revised version will be posted at this URL with an updated date. Continued use of the Extension after changes constitutes acceptance of the revised policy.</p>
+
+    <h2>11. Contact</h2>
+    <p>If you have questions about this privacy policy, please open an issue on the <a href="https://github.com/AgentQ1/interview-copilot/issues" target="_blank" rel="noopener">GitHub repository</a>.</p>
+
+    <footer>
+      &copy; 2026 Interview Copilot. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>

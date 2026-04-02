@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Interview Copilot</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 280px;
+      padding: 16px;
+      font-family: 'Segoe UI', -apple-system, sans-serif;
+      font-size: 13px;
+      color: #111;
+      text-align: center;
+    }
+    .logo { font-size: 24px; margin-bottom: 4px; }
+    h1 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    p { font-size: 11px; color: #888; margin-bottom: 14px; line-height: 1.4; }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #4F7FFF 0%, #3B5FCC 100%);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity .15s;
+    }
+    .btn:hover { opacity: 0.9; }
+    .hint { font-size: 10px; color: #aaa; margin-top: 8px; }
+    .err { color: #EF4444; font-size: 11px; margin-top: 8px; display: none; }
+  </style>
+</head>
+<body>
+  <div class="logo">🎯</div>
+  <h1>Interview Copilot</h1>
+  <p>Launch the floating assistant on your current tab. Drag it anywhere on screen.</p>
+  <button class="btn" id="launchBtn">🚀 Launch on This Tab</button>
+  <div class="hint">Works on Zoom, Google Meet, Teams, etc.</div>
+  <div class="err" id="errMsg"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
