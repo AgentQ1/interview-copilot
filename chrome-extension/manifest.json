@@ -5,8 +5,7 @@
   "version": "1.0.1",
   "permissions": [
     "activeTab",
-    "scripting",
-    "storage"
+    "scripting"
   ],
   "host_permissions": [
     "<all_urls>"
