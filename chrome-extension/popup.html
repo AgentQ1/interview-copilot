@@ -31,13 +31,19 @@
     }
     .btn:hover { opacity: 0.9; }
     .hint { font-size: 10px; color: #aaa; margin-top: 8px; }
+    .key-field { width: 100%; padding: 9px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 8px; font-size: 12px; }
+    .save-btn { background: #111; margin-bottom: 10px; }
+    .status { color: #15803D; font-size: 11px; margin: 0 0 8px; display: none; }
     .err { color: #EF4444; font-size: 11px; margin-top: 8px; display: none; }
   </style>
 </head>
 <body>
   <div class="logo">🎯</div>
   <h1>Interview Copilot</h1>
-  <p>Launch the floating assistant on your current tab. Drag it anywhere on screen.</p>
+  <p>Save your own Gemini API key locally, then launch the assistant. The key is never included in this repository.</p>
+  <input class="key-field" id="apiKeyInput" type="password" autocomplete="off" placeholder="Gemini API key" aria-label="Gemini API key" />
+  <button class="btn save-btn" id="saveKeyBtn">Save API Key</button>
+  <div class="status" id="statusMsg"></div>
   <button class="btn" id="launchBtn">🚀 Launch on This Tab</button>
   <div class="hint">Works on Zoom, Google Meet, Teams, etc.</div>
   <div class="err" id="errMsg"></div>
