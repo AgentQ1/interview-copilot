@@ -3,7 +3,14 @@
    Injects overlay into active tab and handles Gemini API.
    ===================================================== */
 
-const GEMINI_API_KEY = 'AIzaSyBnrrLWz-tQkq-wloKTPS-JLzevKqsmeZY';
+async function getGeminiApiKey() {
+  const { geminiApiKey } = await chrome.storage.local.get('geminiApiKey');
+  const key = typeof geminiApiKey === 'string' ? geminiApiKey.trim() : '';
+  if (!key) {
+    throw new Error('Gemini API key is not configured. Open the extension popup and save your own key.');
+  }
+  return key;
+}
 const GEMINI_MODEL = 'gemini-2.5-flash';
 
 // ─── Gemini API ─────────────────────────────────────
@@ -44,7 +51,8 @@ ${instructions}`;
 }
 
 async function generateAnswer(question, mode) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
+  const geminiApiKey = await getGeminiApiKey();
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${encodeURIComponent(geminiApiKey)}`;
 
   const body = {
     contents: [{
