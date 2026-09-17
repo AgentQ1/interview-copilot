@@ -10,6 +10,15 @@ Built with **Go** backend + **plain HTML/CSS/JS** frontend + **WebSocket** strea
 
 ---
 
+## Chrome Extension Setup
+
+1. Open `chrome://extensions` and enable **Developer mode**.
+2. Load the `chrome-extension` directory as an unpacked extension.
+3. Create your own Gemini API key, open the extension popup, and save it there.
+4. Never commit API keys. The extension stores the key only in `chrome.storage.local` on your device.
+
+---
+
 ## Quick Start
 
 ```bash
